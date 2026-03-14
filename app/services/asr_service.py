@@ -5,13 +5,14 @@ import whisper
 import os
 
 from app.core.logger import log
-
+from app.core.config import settings
 
 class ASRService:
     def __init__(self, model_size: str = "medium"):
         log.info("ASR Service initialized")
         self.model_size = model_size
         self.model = whisper.load_model(model_size)
+        self.model_dir = settings.ASR_model_dir
 
     async def transcribe_audio(
         self,
@@ -75,7 +76,7 @@ class ASRService:
         # model_size="base"：基础模型，适合CPU，中英文准确率不错
         # model_size="large"：大模型，准确率最高，建议GPU运行
         if model_size != self.model_size:
-            self.model = whisper.load_model(model_size)
+            self.model = whisper.load_model(model_size, download_root = self.model_dir)
             self.model_size = model_size
 
         # 3. 识别音频（自动处理音频采样率、格式转换等）

@@ -8,5 +8,7 @@ class Settings:
     LOG_LEVEL: str = "INFO"
     LOG_DIR: str = "./logs"
 
+    ASR_model_dir = ""
+
 
 settings = Settings()
