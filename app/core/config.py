@@ -3,7 +3,7 @@ class Settings:
     APP_VERSION: str = "0.1.0"
     DEBUG: bool = False
     HOST: str = "0.0.0.0"
-    PORT: int = 8996
+    PORT: int = 8696
 
     LOG_LEVEL: str = "INFO"
     LOG_DIR: str = "./logs"

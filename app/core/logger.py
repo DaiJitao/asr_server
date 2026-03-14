@@ -1,6 +1,8 @@
 import os
 from loguru import logger
 from pathlib import Path
+import sys
+
 from app.core.config import settings
 
 
@@ -27,7 +29,6 @@ def setup_logger():
         encoding="utf-8"
     )
 
-    import sys
     logger.add(
         sys.stdout,
         format=log_format,
