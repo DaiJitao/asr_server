@@ -30,7 +30,6 @@ asr_server/
 │   └── main.py                 # FastAPI 应用入口
 ├── logs/                       # 日志目录
 ├── tests/                      # 测试目录
-├── .env.example                # 环境变量示例
 ├── .gitignore
 ├── pyproject.toml
 ├── requirements.txt
@@ -68,14 +67,14 @@ cp .env.example .env
 python -m app.main
 ```
 
-服务将在 `http://0.0.0.0:8990` 启动。
+服务将在 `http://0.0.0.0:8696` 启动。
 
 ## API 文档
 
 启动服务后，可以通过以下地址访问 API 文档：
 
-- Swagger UI: http://localhost:8990/docs
-- ReDoc: http://localhost:8990/redoc
+- Swagger UI: http://localhost:port/docs
+- ReDoc: http://localhost:port/redoc
 
 ## 主要接口
 
