@@ -91,13 +91,17 @@ python -m app.main
 **响应示例**:
 ```json
 {
-  "request_id": "uuid",
-  "text": "识别文本",
-  "confidence": 0.95,
-  "language": "zh",
-  "duration": 5.2,
-  "processing_time": 0.8,
-  "timestamp": "2024-01-01T00:00:00"
+  "code": 0,
+  "msg": "语音识别成功",
+  "data": {
+    "request_id": "xxxx112312r42redfd-dsafsa-qwfwefwe",
+    "text": "没有别人了吧没有好嘞打扰了啊拜拜",
+    "confidence": 0.785,
+    "language": "zh",
+    "duration": 0.0,
+    "processing_time": 24.33
+  },
+  "timestamp": "2026-03-14T06:25:55.417893"
 }
 ```
 
