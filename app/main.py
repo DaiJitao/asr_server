@@ -5,6 +5,7 @@ from app.core.logger import log
 from app.api import router
 
 
+
 def create_app() -> FastAPI:
     app = FastAPI(
         title=settings.APP_NAME,
@@ -54,7 +55,6 @@ def create_app() -> FastAPI:
         return res
 
     return app
-
 
 app = create_app()
 
