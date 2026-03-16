@@ -9,6 +9,7 @@ class Settings:
     LOG_DIR: str = "./logs"
 
     ASR_model_dir = "/app/code/models/asr_model"
+    audio_dir: str = "./app/audio_cache"
 
 
 settings = Settings()
